@@ -38,7 +38,7 @@ function Signup(props) {
         <div className="flex-row space-between my-2">
           <label htmlFor="userName">Username:</label>
           <input
-            placeholder="First"
+            placeholder="username"
             name="userName"
             type="userName"
             id="userName"

@@ -1,9 +1,8 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { default: Stripe } = require('stripe');
 const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
-//will need to add strip here 
-const stripe = require('stripe')('sk_test_4eC39HqLyjwDarjtT1zdp7dc');
+//will need to add stripe here 
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
     Query: {
@@ -55,16 +54,18 @@ const resolvers = {
             throw new AuthenticationError('Not logged in');
         },
         checkout: async (parent, args, context) => {
-            const url = new URL(context.headers.referer).origin;
+            console.log(context.headers);
+            // const url = new URL(context.headers.referer).origin;
             const order = new Order({ products: args.products });
             const line_items = [];
-            const { products } = await order.populate({path:'products', select: 'name description images price'});
+            const { products } = await order.populate('products');
+                // {path:'products', select: 'name description images price'});
 
             for (let i=0; i < products.length; i++) {
                 const product = await stripe.products.create({
                     name: products[i].name,
                     description: products[i].description,
-                    images: [`${url}/images/${products[i].image}`]
+                    // images: [`${url}/images/${products[i].image}`]
                 });
 
                 const price = await stripe.prices.create({
@@ -82,8 +83,10 @@ const resolvers = {
                 payment_method_types: ['card'],
                 line_items,
                 mode: 'payment',
-                success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
-                cancel_url: `${url}/`
+                success_url: 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
+                cancel_url: 'https://example.com/cancel'
+                // success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+                // cancel_url: `${url}/`
             });
 
             return { session: session.id };
