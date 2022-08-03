@@ -55,5 +55,10 @@ export const ADD_PRODUCT = gql`
     $image: String!
     $quantity: Int!
     $price: Float!
-  )
+  ) {
+    categories {
+      _id
+      name
+    }
+  }
 `;
