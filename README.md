@@ -3,7 +3,10 @@
 
 # List-Hub (![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Description
-  E-Commerce site that allows you to buy and sell products online.
+  Description - This is an e-commerce site connected to Stripe that allows users to upload their own products to sell as well.
+Motivation for development? Create a site that allows users to upload products to sell while shopping for products to purchase
+User story - The user wanted a site that they could make money from selling their own products in addition to buying products from other users of the site.
+
 
   ## Table of Contents (Optional)
   - [Installation](#installation)
@@ -44,7 +47,8 @@ SMU.com
   ## Questions
   | Contact Info|
   |----------|
-  Githubs: Jvit1985
-           Jide1012
-           MiaLaFleur
+  Githubs: 
+  Jvit1985
+  Jide1012
+  MiaLaFleur
  
