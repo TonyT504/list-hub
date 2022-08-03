@@ -88,7 +88,7 @@ db.once("open", async () => {
     },
     {
       name: "Your Soul is a River",
-      category: categories[4]._id,
+      category: categories[3]._id,
       description: "Your Soul is a River by Nikita Gill",
       image: "soul-book.jpg",
       price: 14.99,
