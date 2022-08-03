@@ -1,7 +1,7 @@
 :root {
   --primary: #0b141f;
-  --secondary: #47f347;
-  --tertiary: #4334cf;
+  --secondary: #7EBA4D;
+  --tertiary: #191f19;
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -26,6 +26,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   color: var(--dark);
+  background-color: #BBBEB9;
 }
 
 h1,
@@ -167,6 +168,9 @@ input:focus {
 .my-1 {
   margin-top: var(--spacing-one);
   margin-bottom: var(--spacing-one);
+  background-color: #8aa8a9;
+  padding: 15px;
+  border-radius: 13px;
 }
 
 .my-2 {
@@ -197,6 +201,10 @@ input:focus {
 .card {
   width: 25%;
   text-align: center;
+  background-color: #8aa8a9;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 12px;
 }
 
 .error-text {

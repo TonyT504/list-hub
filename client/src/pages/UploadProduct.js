@@ -1,25 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function UploadProduct() {
   return (
-      <div className="container my-1">
-        <Link to="/">← Back to Products</Link>
+    <div className="container my-1">
+      <Link to="/">← Back to Products</Link>
 
-            <h2>
-              Upload your Product!
-            </h2>
-            <form>
-            <div className='flex-row space-between my-2'>
-                <label htmlFor='categoryName'>Category:</label>
-                <select id='categoryName' name='categoryName'>
-                    <option value='food'>Food</option>
-                    <option value='household'>Household Supplies</option>
-                    <option value='electronics'>Electronics</option>
-                    <option value='books'>Books</option>
-                    <option value='toys'>Toys</option>
-                </select>
-            </div>
+      <h2>Upload your Product!</h2>
+      <form className="productForm">
+        <div className="flex-row space-between my-2">
+          <label htmlFor="categoryName">Category:</label>
+          <select id="categoryName" name="categoryName">
+            <option value="food">Food</option>
+            <option value="household">Household Supplies</option>
+            <option value="electronics">Electronics</option>
+            <option value="books">Books</option>
+            <option value="toys">Toys</option>
+          </select>
+        </div>
         <div className="flex-row space-between my-2">
           <label htmlFor="productName">Product Name:</label>
           <input
@@ -31,12 +29,7 @@ function UploadProduct() {
         </div>
         <div className="flex-row space-between my-2">
           <label htmlFor="price">Price:</label>
-          <input
-            placeholder="2.99"
-            name="price"
-            type="float"
-            id="price"
-          />
+          <input placeholder="2.99" name="price" type="float" id="price" />
         </div>
         <div className="flex-row space-between my-2">
           <label htmlFor="quantity">Quantity:</label>
@@ -47,25 +40,27 @@ function UploadProduct() {
             id="quantity"
           />
         </div>
-        <div className='flex-row space-between my-2'>
-            <label htmlFor='description'>Description:</label>
-            <textarea
-                name='description'
-                type='message'
-                id='description'
-                rows = '10'
-            ></textarea>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="description">Description:</label>
+          <textarea
+            name="description"
+            type="message"
+            id="description"
+            rows="10"
+          ></textarea>
         </div>
-        <div className='flex-row space-between my-2'>
-            <label htmlFor='image'>Upload Image:</label>
-            <input type='file' id='image' name='image' accept='image/jpeg'/>
-            <button type='submit' name='uploadFile'>Upload</button>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="image">Upload Image:</label>
+          <input type="file" id="image" name="image" accept="image/jpeg" />
+          <button type="submit" name="uploadFile">
+            Upload
+          </button>
         </div>
         <div className="flex-row flex-end">
           <button type="submit">Submit</button>
         </div>
       </form>
-      </div>
+    </div>
   );
 }
 
