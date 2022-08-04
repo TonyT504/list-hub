@@ -12,7 +12,7 @@
   - [License](#license)
   - [Contributing](#contributing)
   - [Questions](#questions)
-  - 
+  
   ## Installation
   Clone repo, open in VS Code, run npm install at root folder
   
