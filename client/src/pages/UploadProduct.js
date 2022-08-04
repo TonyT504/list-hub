@@ -4,7 +4,7 @@ import { ADD_PRODUCT } from "../utils/mutations";
 import { useMutation } from '@apollo/client';
 
 function UploadProduct() {
-  const [formState, setFormState] = useState({ name: '', description: '', price: '', quantity: '', image: '' });
+  const [formState, setFormState] = useState({ name: '', description: '', price: 0.00, quantity: 0, image: '' });
   const [addProduct] = useMutation(ADD_PRODUCT);
 
   const handleFormSubmit = async (event) => {
@@ -32,10 +32,10 @@ function UploadProduct() {
       <h2>Upload your Product!</h2>
       <form className="productForm" onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
-          <label htmlFor="categoryName">Category:</label>
-          <select id="categoryName" name="categoryName">
+          <label htmlFor="category.name">Category:</label>
+          <select id="category.name" name="category.name">
             <option value="food">Food</option>
-            <option value="household">Household Supplies</option>
+            <option value="household supplies">Household Supplies</option>
             <option value="electronics">Electronics</option>
             <option value="books">Books</option>
             <option value="toys">Toys</option>
@@ -53,7 +53,7 @@ function UploadProduct() {
         </div>
         <div className="flex-row space-between my-2">
           <label htmlFor="price">Price:</label>
-          <input placeholder="2.99" name="price" type="float" id="price" onChange={handleChange}/>
+          <input placeholder="2.99" name="price" type="number" id="price" onChange={handleChange}/>
         </div>
         <div className="flex-row space-between my-2">
           <label htmlFor="quantity">Quantity:</label>

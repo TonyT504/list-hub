@@ -56,9 +56,16 @@ export const ADD_PRODUCT = gql`
     $quantity: Int!
     $price: Float!
   ) {
-    categories {
-      _id
-      name
+      addProduct(
+        name: $name
+        description: $description
+        image: $image
+        quantity: $quantity
+        price: $price
+    ) {
+      category {
+        name
     }
   }
+}
 `;
