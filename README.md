@@ -52,7 +52,7 @@
   | Contact Info|
   |----------|
   Githubs: 
-  github.com/Jvit1985
-  github.com/Jide1012
-  github.com/MiaLaFleur
+  https://github.com/jvit1985
+  https://github.com/Jide1012
+  https://github.com/MiaLaFleur
  
