@@ -46,13 +46,11 @@
   SOFTWARE.
     
   ## Contributing
-  SMU.com
-  
-  ## Questions
-  | Contact Info|
-  |----------|
   Githubs: 
   https://github.com/jvit1985
   https://github.com/Jide1012
   https://github.com/MiaLaFleur
+  
+  ## Questions
+  jvit85@gmail.com
  
