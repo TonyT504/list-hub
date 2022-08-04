@@ -11,7 +11,7 @@ function UploadProduct() {
     event.preventDefault();
     try {
       await addProduct({
-        variables: { name: formState.name, description: formState.description, price: formState.price, quantity: formState.quantity, image: formState.image },
+        variables: { name: formState.name, description: formState.description, price: parseFloat(formState.price), quantity: parseInt(formState.quantity), image: formState.image },
       });
     } catch (e) {
       console.log(e);
@@ -25,6 +25,7 @@ function UploadProduct() {
       [name]: value,
     });
   };
+
   return (
     <div className="container my-1">
       <Link to="/">← Back to Products</Link>
@@ -32,8 +33,8 @@ function UploadProduct() {
       <h2>Upload your Product!</h2>
       <form className="productForm" onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
-          <label htmlFor="category.name">Category:</label>
-          <select id="category.name" name="category.name">
+          <label htmlFor="categoryName">Category:</label>
+          <select id="categoryName" name="categoryName">
             <option value="food">Food</option>
             <option value="household supplies">Household Supplies</option>
             <option value="electronics">Electronics</option>
@@ -53,7 +54,7 @@ function UploadProduct() {
         </div>
         <div className="flex-row space-between my-2">
           <label htmlFor="price">Price:</label>
-          <input placeholder="2.99" name="price" type="number" id="price" onChange={handleChange}/>
+          <input placeholder="2.99" name="price" type="float" id="price" onChange={handleChange}/>
         </div>
         <div className="flex-row space-between my-2">
           <label htmlFor="quantity">Quantity:</label>
