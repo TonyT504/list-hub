@@ -40,7 +40,7 @@ db.once("open", async () => {
       description:
         "These plates were hand created in Italy and are microwave and dishwasher safe.",
       image: "plates.jpg",
-      price: 17.99,
+      price: 19.99,
       quantity: 20,
     },
     {
@@ -83,7 +83,7 @@ db.once("open", async () => {
       description:
         "This is the perfect book for every coffee connoisseur out there.",
       image: "coffee-book.jpg",
-      price: 19.99,
+      price: 17.99,
       quantity: 100,
     },
     {
